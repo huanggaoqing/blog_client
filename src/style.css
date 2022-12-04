@@ -1,0 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+:root {
+  background-color: var(--bg-color);
+}

@@ -1,0 +1,40 @@
+{
+  "name": "blog_clicent",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vue-tsc && vite build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.2.0",
+    "dayjs": "^1.11.6",
+    "lib-flexible": "^0.3.2",
+    "markdown-it": "^13.0.1",
+    "pinia": "^2.0.27",
+    "postcss-plugin-px2rem": "^0.8.1",
+    "vue": "^3.2.41",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.33.1",
+    "@iconify-json/carbon": "^1.1.11",
+    "@iconify-json/quill": "^1.1.2",
+    "@iconify-json/ri": "^1.1.4",
+    "@types/markdown-it": "^12.2.3",
+    "@types/node": "^18.11.10",
+    "@unocss/preset-attributify": "^0.47.4",
+    "@unocss/preset-icons": "^0.47.4",
+    "@vitejs/plugin-vue": "^3.2.0",
+    "eslint": "^8.28.0",
+    "less": "^4.1.3",
+    "typescript": "^4.6.4",
+    "unocss": "^0.47.4",
+    "vite": "^3.2.3",
+    "vue-tsc": "^1.0.9"
+  }
+}
