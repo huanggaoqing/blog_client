@@ -3,7 +3,24 @@
   padding: 0;
   text-decoration: none;
   list-style: none;
+  font-family: "renjianmengyousuixingtiziti";
 }
+
+@font-face {
+  font-family: "yezigongchangtongnianyequti";
+  src: url("./assets/font/yezigongchangtongnianyequti.ttf.ttf");
+}
+
+@font-face {
+  font-family: "renjianmengyousuixingtiziti";
+  src: url("./assets/font/renjianmengyousuixingtiziti.ttf");
+}
+
+@font-face {
+  font-family: "renjianjieshilangmanziti";
+  src: url("./assets/font/renjianjieshilangmanziti.ttf");
+}
+
 :root {
   background-color: var(--bg-color);
 }

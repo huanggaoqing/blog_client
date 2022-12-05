@@ -43,7 +43,6 @@ function handleItemClick(item: IMenu): void {
     color: var(--menu-text-color);
     cursor: pointer;
     user-select: none;
-
     &:last-child {
       margin-right: 0px;
     }

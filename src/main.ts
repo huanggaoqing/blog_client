@@ -9,6 +9,7 @@ import App from '~/App.vue'
 import router from '~/router'
 import storeConfig from '~/tools/piniaStore/config'
 import piniaPersist from '~/tools/piniaStore/piniaPersist'
+import '~/assets/js/mouse.js'
 headDoffA()
 const pinia = createPinia()
 pinia.use(piniaPersist(storeConfig))
