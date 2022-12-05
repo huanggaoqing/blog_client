@@ -23,6 +23,14 @@ function changeTheme(): void {
 </script>
 
 <template>
+  <div v-if="deviceType === 'pc'" class="blog-back-image">
+    <div class="back-image-right">
+      <img :src="getImageUrl(isDark ? 'color-scheme-left.svg' : 'color-scheme-left-dark.svg')">
+    </div>
+    <div class="back-image-left">
+      <img :src="getImageUrl(isDark ? 'color-scheme-right.svg' : 'color-scheme-right-dark.svg')">
+    </div>
+  </div>
   <div class="blog-container">
     <div class="blog-header">
       <Menu :list="menuList" @handle-click="toPath" />
@@ -35,17 +43,7 @@ function changeTheme(): void {
       </div>
     </div>
     <div class="blog-content">
-      <div v-if="deviceType === 'pc'" class="blog-back-image">
-        <div class="back-image-right">
-          <img :src="getImageUrl(isDark ? 'color-scheme-left.svg' : 'color-scheme-left-dark.svg')">
-        </div>
-        <div class="back-image-left">
-          <img :src="getImageUrl(isDark ? 'color-scheme-right.svg' : 'color-scheme-right-dark.svg')">
-        </div>
-      </div>
-      <div class="blog-router-view">
-        <router-view />
-      </div>
+      <router-view />
     </div>
   </div>
 </template>
@@ -56,11 +54,32 @@ function changeTheme(): void {
   height: 16px;
   font-size: 20px;
 }
-
+.blog-back-image {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  div {
+    display: flex;
+    align-items: flex-end;
+    flex: 1;
+    img {
+      width: 350px;
+    }
+  }
+  .back-image-left {
+    justify-content: flex-end;
+    margin-right: 60px;
+  }
+}
 .blog-container {
   height: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 1000;
   .blog-header {
     padding: 32px 30px;
     display: flex;
@@ -91,27 +110,6 @@ function changeTheme(): void {
 
   .blog-content {
     flex: 1;
-    position: relative;
-    .blog-back-image {
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      left: 0;
-      top: 0;
-      display: flex;
-      div {
-        display: flex;
-        align-items: flex-end;
-        flex: 1;
-        img {
-          width: 350px;
-        }
-      }
-      .back-image-left {
-        justify-content: flex-end;
-        margin-right: 60px;
-      }
-    }
   }
 }
 </style>
