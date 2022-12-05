@@ -7,6 +7,7 @@ import menuList from '~/views/besic/menu-list.const'
 import useThemeStore from '~/store/theme.store'
 import Menu from '~/views/besic/component/menu.vue'
 import useDeviceType from '~/hooks/useDeviceType'
+import getImageUrl from '~/tools/getImageUrl/getImageUrl'
 const router = useRouter()
 const deviceType = useDeviceType()
 const theme = useThemeStore()
@@ -34,7 +35,17 @@ function changeTheme(): void {
       </div>
     </div>
     <div class="blog-content">
-      <router-view />
+      <div v-if="deviceType === 'pc'" class="blog-back-image">
+        <div class="back-image-right">
+          <img :src="getImageUrl(isDark ? 'color-scheme-left.svg' : 'color-scheme-left-dark.svg')">
+        </div>
+        <div class="back-image-left">
+          <img :src="getImageUrl(isDark ? 'color-scheme-right.svg' : 'color-scheme-right-dark.svg')">
+        </div>
+      </div>
+      <div class="blog-router-view">
+        <router-view />
+      </div>
     </div>
   </div>
 </template>
@@ -47,9 +58,9 @@ function changeTheme(): void {
 }
 
 .blog-container {
+  height: 100%;
   display: flex;
   flex-direction: column;
-
   .blog-header {
     padding: 32px 30px;
     display: flex;
@@ -80,6 +91,27 @@ function changeTheme(): void {
 
   .blog-content {
     flex: 1;
+    position: relative;
+    .blog-back-image {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: flex;
+      div {
+        display: flex;
+        align-items: flex-end;
+        flex: 1;
+        img {
+          width: 350px;
+        }
+      }
+      .back-image-left {
+        justify-content: flex-end;
+        margin-right: 60px;
+      }
+    }
   }
 }
 </style>

@@ -14,8 +14,8 @@ export async function getProFileRequest(userId: number): Promise<IProfileData> {
   const res = await request.get(ProfileApi.GET_PROFILE, { params: { userId } })
   return {
     ...res.data,
-    createTime: dayjs(res.data.createTime).format('YYYY-MM-DD HH:mm:ss'),
-    updateTime: dayjs(res.data.updateTime).format('YYYY-MM-DD HH:mm:ss'),
-    content: makedownParse.render(res.data.content),
+    createTime: dayjs(res.data?.createTime).format('YYYY-MM-DD HH:mm:ss'),
+    updateTime: dayjs(res.data?.updateTime).format('YYYY-MM-DD HH:mm:ss'),
+    content: makedownParse.render(res.data?.content ?? ''),
   }
 }

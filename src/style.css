@@ -7,3 +7,7 @@
 :root {
   background-color: var(--bg-color);
 }
+
+#app, html, body {
+  height: 100%;
+}
