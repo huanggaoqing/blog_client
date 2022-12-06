@@ -84,6 +84,7 @@
       .blog-list-item-title{
         font-size: 22px;
         color: var(--text-color);
+        font-weight: 600;
       }
       .blog-list-item-time {
         color: var(--text-color);

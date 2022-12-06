@@ -1,12 +1,9 @@
 <script lang="ts" setup>
 import { onBeforeMount, ref } from 'vue'
 import { userId } from '~/constants/constants'
-import useDeviceType from '~/hooks/useDeviceType'
 import type { IProfileData } from '~/service/profile'
 import { getProFileRequest } from '~/service/profile'
-const deviceType = useDeviceType()
 const profile = ref<IProfileData>()
-
 async function getProfile(): Promise<void> {
   const data = await getProFileRequest(userId)
   profile.value = data
