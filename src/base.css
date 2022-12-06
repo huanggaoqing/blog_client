@@ -4,8 +4,10 @@
   --menu-active-text-color: rgba(0, 0, 0, 1);
   --title-color: #000;
   --text-color: #555;
+  --text-active-color: #000;
   --link-color: #000;
   --link-border-color:rgba(0, 0, 0, .3);
+  --blog-group-title-color: rgba(0, 0, 0, .1);
 }
 [data-theme="dark"]{
   --bg-color: rgb(0, 0, 0);
@@ -13,6 +15,8 @@
   --menu-active-text-color:rgba(255,255,255,1);
   --title-color: #fff;
   --text-color: #bbb;
+  --text-active-color: #fff;
   --link-color: #fff;
   --link-border-color: rgba(255, 255, 255,.3);
+  --blog-group-title-color: rgba(255, 255, 255,.1);
 }

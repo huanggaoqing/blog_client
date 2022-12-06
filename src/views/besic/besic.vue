@@ -1,4 +1,3 @@
-<!-- eslint-disable no-console -->
 <script lang="ts" setup>
 import { useRouter } from 'vue-router'
 import { storeToRefs } from 'pinia'
@@ -13,8 +12,7 @@ const deviceType = useDeviceType()
 const theme = useThemeStore()
 const { isDark } = storeToRefs(theme)
 function toPath(item: IMenu): void {
-  console.log({ item })
-  // router.push(path)
+  router.push(item.path)
 }
 function changeTheme(): void {
   const baseTheme = document.documentElement.getAttribute('data-theme')
@@ -43,7 +41,15 @@ function changeTheme(): void {
       </div>
     </div>
     <div class="blog-content">
-      <router-view />
+      <div
+        class="blog-inner"
+        :style="{
+          width: deviceType === 'pc' ? '50%' : '100%',
+          padding: deviceType === 'pc' ? '30px 0px' : '30px',
+        }"
+      >
+        <router-view />
+      </div>
     </div>
   </div>
 </template>
@@ -110,6 +116,11 @@ function changeTheme(): void {
 
   .blog-content {
     flex: 1;
+    .blog-inner{
+      box-sizing: border-box;
+      height: 100%;
+      margin: auto;
+    }
   }
 }
 </style>

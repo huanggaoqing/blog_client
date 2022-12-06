@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { onBeforeMount, ref } from 'vue'
+import { userId } from '~/constants/constants'
 import useDeviceType from '~/hooks/useDeviceType'
 import type { IProfileData } from '~/service/profile'
 import { getProFileRequest } from '~/service/profile'
@@ -7,7 +8,7 @@ const deviceType = useDeviceType()
 const profile = ref<IProfileData>()
 
 async function getProfile(): Promise<void> {
-  const data = await getProFileRequest(5)
+  const data = await getProFileRequest(userId)
   profile.value = data
 }
 onBeforeMount(() => {
@@ -16,12 +17,7 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <div
-    class="blog-home" :style="{
-      width: deviceType === 'pc' ? '50%' : '100%',
-      padding: deviceType === 'pc' ? '30px 0px' : '30px',
-    }"
-  >
+  <div class="blog-home">
     <div v-html="profile?.content" />
     <ul v-show="profile?.content" class="blog-content-time">
       <li>
@@ -47,10 +43,10 @@ onBeforeMount(() => {
 }
 
 .blog-home {
-  width: 50%;
-  margin: auto;
-  padding-top: 60px;
+  width: 100%;
   box-sizing: border-box;
+  font-size: 16px;
+  color: var(--text-color);
   .blog-content-time {
     padding-top: 50px;
     li {
@@ -60,14 +56,14 @@ onBeforeMount(() => {
       align-items: center;
     }
     .blog-content-time-item {
-      min-width: 145px;
+      min-width: 130px;
     }
     div {
       font-size: 14px !important;
       display: inline !important;
       opacity: .6;
     }
-}
+  }
   h1 {
     font-size: 36px;
     font-weight: 800;
@@ -77,6 +73,7 @@ onBeforeMount(() => {
 
   p,
   span {
+    word-wrap:break-word;
     font-size: 16px !important;
     color: var(--text-color);
     margin-bottom: 20px;
