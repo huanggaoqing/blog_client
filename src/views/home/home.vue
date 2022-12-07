@@ -3,7 +3,7 @@ import { onBeforeMount, ref } from 'vue'
 import { userId } from '~/constants/constants'
 import type { IProfileData } from '~/service/profile'
 import { getProFileRequest } from '~/service/profile'
-const profile = ref<IProfileData>()
+const profile = ref<IProfileData>({} as IProfileData)
 async function getProfile(): Promise<void> {
   const data = await getProFileRequest(userId)
   profile.value = data
@@ -15,18 +15,18 @@ onBeforeMount(() => {
 
 <template>
   <div class="blog-home">
-    <div v-html="profile?.content" />
-    <ul v-show="profile?.content" class="blog-content-time">
+    <div v-html="profile.content" />
+    <ul v-show="profile.content" class="blog-content-time">
       <li>
         <div>上传于：</div>
         <div class="blog-content-time-item">
-          {{ profile?.createTime }}
+          {{ profile.createTime }}
         </div>
       </li>
       <li>
         <div>更新于：</div>
         <div class="blog-content-time-item">
-          {{ profile?.updateTime }}
+          {{ profile.updateTime }}
         </div>
       </li>
     </ul>

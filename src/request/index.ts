@@ -1,8 +1,7 @@
 /* eslint-disable no-console */
 import axios from 'axios'
-
 const request = axios.create({
-  baseURL: '/api',
+  baseURL: import.meta.env.VITE_BASE_URL,
   timeout: 10 * 1000,
 })
 
