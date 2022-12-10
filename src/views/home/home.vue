@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { onBeforeMount, ref } from 'vue'
 import { userId } from '~/constants/constants'
-import type { IProfileData } from '~/service/profile'
-import { getProFileRequest } from '~/service/profile'
+import type { IProfileData } from '~/service/profile/profile.type'
+import { getProFileRequest } from '~/service/profile/profile'
 const profile = ref<IProfileData>({} as IProfileData)
 async function getProfile(): Promise<void> {
   const data = await getProFileRequest(userId)

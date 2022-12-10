@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { useRouter } from 'vue-router'
 import { storeToRefs } from 'pinia'
-import type { IMenu } from './typings'
+import type { IMenu } from './besic.type'
 import menuList from '~/views/besic/menu-list.const'
 import useThemeStore from '~/store/theme.store'
 import Menu from '~/views/besic/component/menu.vue'

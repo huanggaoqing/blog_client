@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import useDeviceType from '~/hooks/useDeviceType'
-import type { IMenu } from '~/views/besic/typings'
+import type { IMenu } from '~/views/besic/besic.type'
 const props = defineProps<{
   list: IMenu[]
 }>()

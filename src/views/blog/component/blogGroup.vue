@@ -85,11 +85,15 @@
         font-size: 22px;
         color: var(--text-color);
         font-weight: 600;
+        cursor: pointer;
+        user-select: none;
       }
       .blog-list-item-time {
         color: var(--text-color);
         opacity: .5;
         font-size: 16px;
+        cursor: pointer;
+        user-select: none;
       }
     }
   }

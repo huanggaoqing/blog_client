@@ -1,4 +1,4 @@
-import type { IMenu } from './typings'
+import type { IMenu } from './besic.type'
 
 export default [
   {

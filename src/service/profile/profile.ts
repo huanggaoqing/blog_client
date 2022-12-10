@@ -1,15 +1,14 @@
 import MarkdownIt from 'markdown-it'
 import dayjs from 'dayjs'
+import type { IProfileData } from './profile.type'
 import request from '~/request'
 import { ProfileApi } from '~/request/api'
 const makedownParse = new MarkdownIt()
-export interface IProfileData {
-  profileId: number
-  userId: number
-  content: string
-  createTime: string
-  updateTime: string
-}
+/**
+ * 获取个人简介请求方法
+ * @param {number} userId - 用户ID。
+ * @returns 个人简介数据
+ */
 export async function getProFileRequest(userId: number): Promise<IProfileData> {
   const res = await request.get(ProfileApi.GET_PROFILE, { params: { userId } })
   return {
