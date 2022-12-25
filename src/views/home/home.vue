@@ -44,6 +44,7 @@ onBeforeMount(() => {
   box-sizing: border-box;
   font-size: 16px;
   color: var(--text-color);
+  font-family: "renjianmengyousuixingtiziti";
   .blog-content-time {
     padding-top: 50px;
     li {

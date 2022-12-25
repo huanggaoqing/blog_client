@@ -3,12 +3,16 @@
   padding: 0;
   text-decoration: none;
   list-style: none;
-  font-family: "renjianmengyousuixingtiziti";
+}
+
+@font-face {
+  font-family: "InputMono-Regular";
+  src: url("./assets/font/InputMono-Regular.ttf");
 }
 
 @font-face {
   font-family: "yezigongchangtongnianyequti";
-  src: url("./assets/font/yezigongchangtongnianyequti.ttf.ttf");
+  src: url("./assets/font/yezigongchangtongnianyequti.ttf");
 }
 
 @font-face {

@@ -1,0 +1,128 @@
+[data-theme="light"] pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+
+[data-theme="light"] code.hljs {
+  padding: 3px 5px
+}
+
+[data-theme="light"] .hljs {
+  font-family: "InputMono-Regular" !important;
+  position: relative !important;
+  display: block !important;
+  overflow-x: scroll !important;
+  padding: 30px 5px 2px 5px !important;
+  box-shadow: 0 10px 30px 0px rgb(0 0 0 / 40%) !important;
+  color: #586875 !important;
+  background: #f5f7fa !important
+}
+
+[data-theme="light"] .hljs ::selection,
+[data-theme="light"] .hljs::selection {
+  background-color: #a6afb8;
+  color: #586875
+}
+
+[data-theme="light"] .hljs-comment {
+  color: #85939e
+}
+
+[data-theme="light"] .hljs-tag {
+  color: #667581
+}
+
+[data-theme="light"] .hljs-operator,
+[data-theme="light"] .hljs-punctuation,
+[data-theme="light"] .hljs-subst {
+  color: #586875
+}
+
+[data-theme="light"] .hljs-operator {
+  opacity: .7
+}
+
+[data-theme="light"] .hljs-bullet,
+[data-theme="light"] .hljs-deletion,
+[data-theme="light"] .hljs-name,
+[data-theme="light"] .hljs-selector-tag,
+[data-theme="light"] .hljs-template-variable,
+[data-theme="light"] .hljs-variable {
+  color: #ef5253
+}
+
+[data-theme="light"] .hljs-attr,
+.hljs-link,
+.hljs-literal,
+.hljs-number,
+.hljs-symbol,
+.hljs-variable.constant_ {
+  color: #e66b2b
+}
+
+[data-theme="light"] .hljs-class .hljs-title,
+.hljs-title,
+.hljs-title.class_ {
+  color: #e4b51c
+}
+
+[data-theme="light"] .hljs-strong {
+  font-weight: 700;
+  color: #e4b51c
+}
+
+[data-theme="light"] .hljs-addition,
+.hljs-code,
+.hljs-string,
+.hljs-title.class_.inherited__ {
+  color: #7cc844
+}
+
+[data-theme="light"] .hljs-built_in,
+.hljs-doctag,
+.hljs-keyword.hljs-atrule,
+.hljs-quote,
+.hljs-regexp {
+  color: #52cbb0
+}
+
+[data-theme="light"] .hljs-attribute,
+.hljs-function .hljs-title,
+.hljs-section,
+.hljs-title.function_,
+.ruby .hljs-property {
+  color: #33b5e1
+}
+
+[data-theme="light"] .diff .hljs-meta,
+.hljs-keyword,
+.hljs-template-tag,
+.hljs-type {
+  color: #a363d5
+}
+
+[data-theme="light"] .hljs-emphasis {
+  color: #a363d5;
+  font-style: italic
+}
+
+[data-theme="light"] .hljs-meta,
+.hljs-meta .hljs-keyword,
+.hljs-meta .hljs-string {
+  color: #d73c9a
+}
+
+[data-theme="light"] .hljs-meta .hljs-keyword,
+.hljs-meta-keyword {
+  font-weight: 700
+}
+
+[data-theme="light"] .hljs li:nth-of-type(even) {
+  background-color: rgba(0, 0, 0, .015) !important;
+  color: inherit
+}
+[data-theme="light"] .hljs li:hover {
+  background-color: rgba(0, 0, 0, .3) !important;
+  color: inherit
+}

@@ -10,6 +10,8 @@ import router from '~/router'
 import storeConfig from '~/tools/piniaStore/config'
 import piniaPersist from '~/tools/piniaStore/piniaPersist'
 import '~/assets/js/mouse.js'
+import '~/github-markdown-css'
+import '~/assets/codeStyle/code.css'
 headDoffA()
 const pinia = createPinia()
 pinia.use(piniaPersist(storeConfig))

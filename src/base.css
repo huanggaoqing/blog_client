@@ -8,6 +8,8 @@
   --link-color: #000;
   --link-border-color:rgba(0, 0, 0, .3);
   --blog-group-title-color: rgba(0, 0, 0, .1);
+  --copy-btn-color: rgba(38, 38, 38, .2);
+  --copy-btn-active-color: rgba(38, 38, 38, .1);
 }
 [data-theme="dark"]{
   --bg-color: rgb(0, 0, 0);
@@ -19,4 +21,6 @@
   --link-color: #fff;
   --link-border-color: rgba(255, 255, 255,.3);
   --blog-group-title-color: rgba(255, 255, 255,.1);
+  --copy-btn-color: rgba(221, 221, 221, .1);
+  --copy-btn-active-color: rgba(221, 221, 221, .2);
 }

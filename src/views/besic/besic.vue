@@ -90,6 +90,7 @@ function changeTheme(): void {
     padding: 32px 30px;
     display: flex;
     justify-content: flex-end;
+    font-family: "renjianmengyousuixingtiziti";
 
     .blog-header-operation {
       height: 100%;

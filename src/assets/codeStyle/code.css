@@ -1,0 +1,205 @@
+@import url("./code.dark.css");
+@import url("./code.light.css");
+ /*codecopy*/
+ .codecopy-btn {
+  position: absolute;
+  border: none;
+  transition: all 0.5s;
+  top: 10px;
+  right: 20px;
+  width: 90px;
+  border-radius: 5px;
+  background-color: var(--copy-btn-color);
+  color: var(--text-color);
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px
+}
+
+.codecopy-btn:hover {
+  background-color: var(--copy-btn-active-color);
+  top: 9px
+}
+
+.hljs::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  overflow: visible;
+  width: 12px;
+  height: 12px;
+  border-radius: 16px;
+  box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  -webkit-box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  background-color: #fc625d;
+  white-space: nowrap;
+  text-indent: 75px;
+  font-size: 16px;
+  line-height: 12px;
+  font-weight: 700
+}
+
+.hljs.language-html::before,
+ .hljs.language-xml::before {
+   content: "HTML/XML"
+ }
+
+ .hljs.language-javascript::before {
+   content: "JavaScript"
+ }
+
+ .hljs.language-c::before {
+   content: "C"
+ }
+
+ .hljs.language-cpp::before {
+   content: "C++"
+ }
+
+ .hljs.language-java::before {
+   content: "Java"
+ }
+
+ .hljs.language-asp::before {
+   content: "ASP"
+ }
+
+ .hljs.language-actionscript::before {
+   content: "ActionScript/Flash/Flex"
+ }
+
+ .hljs.language-bash::before {
+   content: "Bash"
+ }
+
+ .hljs.language-css::before {
+   content: "CSS"
+ }
+
+ .hljs.language-asp::before {
+   content: "ASP"
+ }
+
+ .hljs.language-cs::before,
+ .hljs.language-csharp::before {
+   content: "C#"
+ }
+
+ .hljs.language-d::before {
+   content: "D"
+ }
+
+ .hljs.language-golang::before,
+ .hljs.language-go::before {
+   content: "Go"
+ }
+
+ .hljs.language-json::before {
+   content: "JSON"
+ }
+
+ .hljs.language-lua::before {
+   content: "Lua"
+ }
+
+ .hljs.language-less::before {
+   content: "LESS"
+ }
+
+ .hljs.language-md::before,
+ .hljs.language-markdown::before,
+ .hljs.language-mkdown::before,
+ .hljs.language-mkd::before {
+   content: "Markdown"
+ }
+
+ .hljs.language-mm::before,
+ .hljs.language-objc::before,
+ .hljs.language-obj-c::before,
+ .hljs.language-objective-c::before {
+   content: "Objective-C"
+ }
+
+ .hljs.language-php::before {
+   content: "PHP"
+ }
+
+ .hljs.language-perl::before,
+ .hljs.language-pl::before,
+ .hljs.language-pm::before {
+   content: "Perl"
+ }
+
+ .hljs.language-python::before,
+ .hljs.language-py::before,
+ .hljs.language-gyp::before,
+ .hljs.language-ipython::before {
+   content: "Python"
+ }
+
+ .hljs.language-r::before {
+   content: "R"
+ }
+
+ .hljs.language-ruby::before,
+ .hljs.language-rb::before,
+ .hljs.language-gemspec::before,
+ .hljs.language-podspec::before,
+ .hljs.language-thor::before,
+ .hljs.language-irb::before {
+   content: "Ruby"
+ }
+
+ .hljs.language-sql::before {
+   content: "SQL"
+ }
+
+ .hljs.language-sh::before,
+ .hljs.language-shell::before,
+ .hljs.language-Session::before,
+ .hljs.language-shellsession::before,
+ .hljs.language-console::before {
+   content: "Shell"
+ }
+
+ .hljs.language-swift::before {
+   content: "Swift"
+ }
+
+ .hljs.language-vb::before {
+   content: "VB/VBScript"
+ }
+
+ .hljs.language-yaml::before {
+   content: "YAML"
+ }
+
+ code {
+   padding-left: 0 !important;
+ }
+
+ .hljs ul {
+   min-width: calc(100% - 40px) !important;
+   list-style: decimal;
+   margin: 0 0 0 40px !important;
+   padding: 0;
+   float: left;
+ }
+
+  .hljs ul:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+  }
+
+ .hljs li {
+   list-style: decimal-leading-zero;
+   border-left: 1px solid #111 !important;
+   padding: 2px 5px !important;
+   margin: 0 !important;
+   line-height: 16px !important;
+   width: auto !important;
+   box-sizing: border-box !important;
+ }

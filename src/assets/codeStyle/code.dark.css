@@ -1,0 +1,160 @@
+ /*语法高亮*/
+ [data-theme="dark"] .hljs {
+  font-family: "InputMono-Regular" !important;
+  /* position: relative !important; */
+  display: block !important;
+  overflow-x: scroll !important;
+  background: #21252B !important;
+  color: #999 !important;
+  padding: 30px 5px 2px 5px !important;
+  box-shadow: 0 10px 30px 0px rgb(0 0 0 / 40%) !important;
+}
+
+ .hljs-ln {
+   display: inline-block;
+   overflow-x: auto;
+   padding-bottom: 5px
+ }
+
+ [data-theme="dark"] .hljs-ln td {
+   padding: 0;
+   background-color: #21252B
+ }
+
+ [data-theme="dark"] .hljs-ln::-webkit-scrollbar {
+   height: 10px;
+   border-radius: 5px;
+   background: #333;
+ }
+
+ [data-theme="dark"] .hljs-ln::-webkit-scrollbar-thumb {
+   background-color: #bbb;
+   border-radius: 5px;
+ }
+
+ [data-theme="dark"] .hljs-ln::-webkit-scrollbar-thumb:hover {
+   background: #ddd;
+ }
+
+ [data-theme="dark"] .hljs table tbody tr {
+   border: none
+ }
+
+ [data-theme="dark"] .hljs .hljs-ln-line {
+   padding: 1px 10px;
+   border: none
+ }
+
+ [data-theme="dark"] td.hljs-ln-line.hljs-ln-numbers {
+   border-right: 1px solid #666;
+ }
+
+ [data-theme="dark"] .hljs-keyword,
+ [data-theme="dark"] .hljs-literal,
+ [data-theme="dark"] .hljs-symbol,
+ [data-theme="dark"] .hljs-name {
+   color: #569cd6
+ }
+
+ [data-theme="dark"] .hljs-link {
+   color: #569cd6;
+   text-decoration: underline
+ }
+
+ [data-theme="dark"] .hljs-built_in,
+ [data-theme="dark"] .hljs-type {
+   color: #4ec9b0
+ }
+
+ [data-theme="dark"] .hljs-number,
+ [data-theme="dark"] .hljs-class {
+   color: #b8d7a3
+ }
+
+ [data-theme="dark"] .hljs-string,
+ [data-theme="dark"] .hljs-meta-string {
+   color: #d69d85
+ }
+
+ [data-theme="dark"] .hljs-regexp,
+ [data-theme="dark"] .hljs-template-tag {
+   color: #9a5334
+ }
+
+ [data-theme="dark"] .hljs-subst,
+ .hljs-function,
+ .hljs-title,
+ .hljs-params,
+ .hljs-formula {
+   color: #dcdcdc
+ }
+
+ [data-theme="dark"] .hljs-comment,
+ .hljs-quote {
+   color: #57a64a;
+   font-style: italic
+ }
+
+ [data-theme="dark"] .hljs-doctag {
+   color: #608b4e
+ }
+
+ [data-theme="dark"] .hljs-meta,
+ .hljs-meta-keyword,
+ .hljs-tag {
+   color: #9b9b9b
+ }
+
+ [data-theme="dark"] .hljs-variable,
+ .hljs-template-variable {
+   color: #bd63c5
+ }
+
+ [data-theme="dark"] .hljs-attr,
+ .hljs-attribute,
+ .hljs-builtin-name {
+   color: #9cdcfe
+ }
+
+ [data-theme="dark"] .hljs-section {
+   color: gold
+ }
+
+ [data-theme="dark"] .hljs-emphasis {
+   font-style: italic
+ }
+
+ [data-theme="dark"] .hljs-strong {
+   font-weight: bold
+ }
+
+ [data-theme="dark"] .hljs-bullet,
+ .hljs-selector-tag,
+ .hljs-selector-id,
+ .hljs-selector-class,
+ .hljs-selector-attr,
+ .hljs-selector-pseudo {
+   color: #d7ba7d
+ }
+
+ [data-theme="dark"] .hljs-addition {
+   background-color: #144212;
+   display: inline-block;
+   width: 100%
+ }
+
+ [data-theme="dark"] .hljs-deletion {
+   background-color: #600;
+   display: inline-block;
+   width: 100%
+ }
+
+ [data-theme="dark"] .hljs li:nth-of-type(even) {
+  background-color: rgba(255, 255, 255, .015) !important;
+  color: inherit
+}
+
+[data-theme="dark"] .hljs li:hover {
+  background-color: rgba(255, 255, 255, .3) !important;
+  color: inherit
+}

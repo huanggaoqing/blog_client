@@ -1,57 +1,33 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { computed } from 'vue'
+import type { IArticleData, IArticleItem } from '~/service/article/article.type'
+
+const props = defineProps<{
+  data: IArticleData
+}>()
+const emits = defineEmits<{
+  (e: 'handleClick', articleId: string): void
+}>()
+const articleData = computed(() => props.data)
+</script>
 
 <template>
   <div class="blog-list-group">
     <div class="blog-list-group-title">
-      2022
+      {{ articleData.year }}
     </div>
     <div class="blog-list-group-inner">
-      <div class="blog-list-item">
+      <div
+        v-for="(item) in articleData.list"
+        :key="item.articleId"
+        class="blog-list-item"
+        @click="emits('handleClick', item.articleId)"
+      >
         <div class="blog-list-item-title">
-          Dev SSR on Nuxt with Vite
+          {{ item.articleTitle }}
         </div>
         <div class="blog-list-item-time">
-          Oct 4 · 15min
-        </div>
-      </div>
-      <div class="blog-list-item">
-        <div class="blog-list-item-title">
-          Dev SSR on Nuxt with Vite
-        </div>
-        <div class="blog-list-item-time">
-          Oct 4 · 15min
-        </div>
-      </div>
-      <div class="blog-list-item">
-        <div class="blog-list-item-title">
-          Dev SSR on Nuxt with Vite
-        </div>
-        <div class="blog-list-item-time">
-          Oct 4 · 15min
-        </div>
-      </div>
-      <div class="blog-list-item">
-        <div class="blog-list-item-title">
-          Dev SSR on Nuxt with Vite
-        </div>
-        <div class="blog-list-item-time">
-          Oct 4 · 15min
-        </div>
-      </div>
-      <div class="blog-list-item">
-        <div class="blog-list-item-title">
-          Dev SSR on Nuxt with Vite
-        </div>
-        <div class="blog-list-item-time">
-          Oct 4 · 15min
-        </div>
-      </div>
-      <div class="blog-list-item">
-        <div class="blog-list-item-title">
-          Dev SSR on Nuxt with Vite
-        </div>
-        <div class="blog-list-item-time">
-          Oct 4 · 15min
+          {{ item.createTime }}
         </div>
       </div>
     </div>
