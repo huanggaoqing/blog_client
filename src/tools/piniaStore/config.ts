@@ -1,7 +1,5 @@
-export interface IStore {
-  session: string[]
-  local: string[]
-}
+import type { IStore } from './piniaPersist.type'
+
 export default {
   session: ['themeStore'],
   local: [],

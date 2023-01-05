@@ -1,6 +1,6 @@
 import hljs from 'highlight.js'
 import ClipboardJS from 'clipboard'
-
+import { COPY, COPY_SUCCES } from '~/constants/constants'
 /**
  * 添加高亮类名
  * @param {HTMLElement} dom - HTMLElement - 添加高亮类名的代码块的 DOM 元素。
@@ -32,16 +32,16 @@ export function codecopy_func(dom: HTMLElement) {
   Array.from(codecopys).forEach((item, idx) => {
     const btn = document.createElement('button')
     btn.className = `codecopy-btn btn${idx}`
-    btn.innerHTML = '复制';
+    btn.innerHTML = COPY;
     (item as HTMLElement).style.position = 'relative';
     (item as HTMLElement).appendChild(btn)
     const clipboard = new ClipboardJS(`.btn${idx}`, {
       target: () => item.querySelector('code')!,
     })
     clipboard.on('success', () => {
-      btn.innerHTML = '复制成功'
+      btn.innerHTML = COPY_SUCCES
       setTimeout(() => {
-        btn.innerHTML = '复制'
+        btn.innerHTML = COPY
       }, 3 * 1000)
     })
   })

@@ -1,5 +1,5 @@
 import type { PiniaPluginContext } from 'pinia'
-import type { IStore } from './config'
+import type { IStore } from './piniaPersist.type'
 export default function piniaPersist(options: IStore): (context: PiniaPluginContext) => void {
   return (context: PiniaPluginContext) => {
     const { store } = context
